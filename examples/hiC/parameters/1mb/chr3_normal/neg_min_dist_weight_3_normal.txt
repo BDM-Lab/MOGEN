@@ -1,0 +1,2 @@
+#coefficients for intrachromosomal contacts of chromosomes
+1600.0

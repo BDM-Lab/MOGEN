@@ -1,0 +1,52 @@
+#parameters to generate genome structures of 23 chromosomes
+#all distances here are square distance, all 15 parameters are required and no space should be included in the value
+#number of structures will be generated
+NUM = 1
+
+#number of chromosomes
+NBR_OF_CHR = 24
+
+#file contains break-points for chromosomes
+CHR_UPPER_BOUND_ID_FILE = parameters/all_normal/chr_upper_bound_id.txt
+
+#contact with interaction frequency less than this is considered as non-contact, 
+
+#INTRA_IF_THRESHOLD = 0.65
+INTRA_IF_THRESHOLD = 80%
+#INTER_IF_THRESHOLD = 0.58
+INTER_IF_THRESHOLD = 18%
+
+
+#NOTICE: the following distances are in square
+#maximum distance between 2 adjacent points
+ADJACENT_DIST = 1.5
+#contact distance, points that are in contact should have square distance less than this
+#when it is large , the whole structure will be scaled down in optimization and zoom out later
+CONTACT_DIST = 6.0
+POS_MIN_DIST = 0.2
+NEG_MAX_DIST_INTRA = 30
+NEG_MAX_DIST_INTER = 150
+
+#increase this parameter to improve contact score, (but will decrease non-contact score)
+POS_MAX_DIST_WEIGHT_FILE = parameters/all_normal/pos_max_dist_weight.txt
+#increase this parameter if adjacent points are to close to each other
+POS_MIN_DIST_WEIGHT_FILE = parameters/all_normal/pos_min_dist_weight.txt
+#increase this parameter to improve non-contact score, (but will decrease contact score)
+NEG_MIN_DIST_WEIGHT_FILE = parameters/all_normal/neg_min_dist_weight.txt
+#increase this parameter to prevent the structure from spanning too much (make the structure smaller)
+NEG_MAX_DIST_WEIGHT_FILE = parameters/all_normal/neg_max_dist_weight.txt
+
+
+
+OUTPUT_FOLDER = output
+
+INPUT_FILE = input/NoY_All_interIntraContact_1M_nml.txt
+
+#set VERBOSE = true for information during optimization printed out
+VERBOSE = true
+
+#learning rate for the optimization process, increase the learning rate can speed up the optimization process significantly, but sometimes, the optimization may fail
+#if the program fails to generate structures, or the distance between 2 consecutive points are too large, try to reduce this learning rate
+LEARNING_RATE = 0.001
+#during parameter adjustment, increase LEARNING_RATE and decrease MAX_ITERATION, so that "coarse" structures can be quickly generated
+MAX_ITERATION = 20000

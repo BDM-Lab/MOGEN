@@ -1,0 +1,3 @@
+#coefficients for intrachromosomal contacts of chromosomes
+1.0
+
