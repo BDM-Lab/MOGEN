@@ -1,0 +1,15 @@
+Number of chromosomes: 1
+Input file: input/IFList_Chr_1_100kb.txt
+Intra-chromosomal threshold: 1.0E-4
+Contact distance: 6.0
+Minimum distance: 0.2
+Maximum distance of 2 adjacent fragments: 1.5
+Maximum distance between any 2 fragments of the same chromosome: 30.0
+Learning rate: 0.001
+Maximum number of iteration for the optimization: 20000
+Weights to enforce contacts to be satisfied (POS_MAX_DIST_WEIGHT_FILE): parameters/100kb/chr1_normal/pos_max_dist_weight_1_normal.txt
+Weight to enfore minimum distance between fragments (POS_MIN_DIST_WEIGHT_FILE) : parameters/100kb/chr1_normal/pos_min_dist_weight_1_normal.txt
+Weight to enfore non-contacts to be satisfied (NEG_MIN_DIST_WEIGHT_FILE) : parameters/100kb/chr1_normal/neg_min_dist_weight_1_normal.txt
+Weight to enfore maximum distance between fragments (NEG_MAX_DIST_WEIGHT_FILE) : parameters/100kb/chr1_normal/neg_max_dist_weight_1_normal.txt
+
+1 structures generated in: 43.19 minutes 

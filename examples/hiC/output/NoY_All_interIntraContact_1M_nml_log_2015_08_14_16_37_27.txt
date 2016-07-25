@@ -1,0 +1,19 @@
+Intra-chrosomal threshold computed from the percentage: 0.6294144260760727
+Inter-chrosomal threshold computed from the percentage: 0.587480650367983
+Number of chromosomes: 24
+Input file: input/NoY_All_interIntraContact_1M_nml.txt
+Intra-chromosomal threshold: 80.0
+Inter-chromosomal threshold: 18.0
+Contact distance: 6.0
+Minimum distance: 0.2
+Maximum distance of 2 adjacent fragments: 1.5
+Maximum distance between any 2 fragments of the same chromosome: 30.0
+Maximum distance between any 2 fragments: 150.0
+Learning rate: 0.001
+Maximum number of iteration for the optimization: 20000
+Weights to enforce contacts to be satisfied (POS_MAX_DIST_WEIGHT_FILE): parameters/all_normal/pos_max_dist_weight.txt
+Weight to enfore minimum distance between fragments (POS_MIN_DIST_WEIGHT_FILE) : parameters/all_normal/pos_min_dist_weight.txt
+Weight to enfore non-contacts to be satisfied (NEG_MIN_DIST_WEIGHT_FILE) : parameters/all_normal/neg_min_dist_weight.txt
+Weight to enfore maximum distance between fragments (NEG_MAX_DIST_WEIGHT_FILE) : parameters/all_normal/neg_max_dist_weight.txt
+
+1 structures generated in: 6.27 minutes 

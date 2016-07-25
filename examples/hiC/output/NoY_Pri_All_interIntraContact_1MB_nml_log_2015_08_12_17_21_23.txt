@@ -1,0 +1,17 @@
+Number of chromosomes: 24
+Input file: input/NoY_Pri_All_interIntraContact_1MB_nml.txt
+Intra-chromosomal threshold: 0.5
+Inter-chromosomal threshold: 0.5
+Contact distance: 6.0
+Minimum distance: 0.2
+Maximum distance of 2 adjacent fragments: 1.5
+Maximum distance between any 2 fragments of the same chromosome: 30.0
+Maximum distance between any 2 fragments: 150.0
+Learning rate: 0.001
+Maximum number of iteration for the optimization: 20000
+Weights to enforce contacts to be satisfied (POS_MAX_DIST_WEIGHT_FILE): parameters/all_pri/pos_max_dist_weight_all_pri.txt
+Weight to enfore minimum distance between fragments (POS_MIN_DIST_WEIGHT_FILE) : parameters/all_pri/pos_min_dist_weight_all_pri.txt
+Weight to enfore non-contacts to be satisfied (NEG_MIN_DIST_WEIGHT_FILE) : parameters/all_pri/neg_min_dist_weight_all_pri.txt
+Weight to enfore maximum distance between fragments (NEG_MAX_DIST_WEIGHT_FILE) : parameters/all_pri/neg_max_dist_weight_all_pri.txt
+
+1 structures generated in: 11.53 minutes 

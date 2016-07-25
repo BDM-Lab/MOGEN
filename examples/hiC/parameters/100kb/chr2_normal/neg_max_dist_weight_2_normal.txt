@@ -1,0 +1,4 @@
+#coefficients for intrachromosomal contacts of chromosome
+1.0
+
+
