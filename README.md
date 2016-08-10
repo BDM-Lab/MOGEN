@@ -66,6 +66,11 @@ the performance of the program.
 
 MOGEN produces two output files, a .pdb file containing a model and a *_evaluation.txt file containing contact and non-contact scores of the model. Parameters are adjusted to maximize contact and non-contact scores. The effect of each parameter on corresponding contact and non-contact scores is mentioned in comments in the parameter sample file.
 
+When there are multiple chromosomes, first, adjust parameters to have good contact and non-contact scores for chromosomes. Then, make sure that chromosomes don't intermingle by increasing inter, non-contact scores between chromosomes (> 60%). Next, let chromosome interacts at their border as much as possible but not intermingling significantly. 
+
+It's hard for all chromosomes to satisfy all these conditions, so, it is acceptable to have 1 or 2 chromosomes with low non-contact scores (small chromosomes, whose intra-chromosomal IFs are very strong) and 1 or 2 pairs of chromosomes that intermingle (again, small chromosomes as they co-localize in the center and their inter-chromosomal IFs are also strong). If chromosomes tends to intermingle significantly, try to reduce percentage of inter-chromosomal contacts.
+
+
 ### 2. Why my non-contact score is NaN ? ###
 
 This is because there is no or very few non-contacts in the input data, which often happens when the resolution is low (e.g 1MB). Set an appropriate contact threshold to make sure that there is at least 20% - 30% non-contacts (out of all possible contacts), the exact number doesn't matter because models are often similar.  
