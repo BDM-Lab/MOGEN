@@ -309,11 +309,11 @@ public class GenomeGenerator implements OptimizedObject{
 						
 			contactMT = helper.readContactData(INPUT_FILE,intra_thres,inter_thres,CHR_UPPER_BOUND_ID,lstPositions,idToChr);
 			
-			for(int i = 0; i < lstPositions.size(); i++){
-				if (lstPositions.get(i) != i + 1){
-					System.out.println("");
-				}
-			}
+//			for(int i = 0; i < lstPositions.size(); i++){
+//				if (lstPositions.get(i) != i + 1){
+//					System.out.println("");
+//				}
+//			}
 			
 		}catch(Exception ex){
 			ex.printStackTrace();
@@ -476,13 +476,20 @@ public class GenomeGenerator implements OptimizedObject{
 			max1 = max2;			
 		}
 		
-		maxIF = (max1 + max2 + max3 + max4) / 4.0 ; //because all IFs are divided by avgIF
+		//Aug - 9 - 2016: testing for steven data
+		count = contactMT.getNbrContact();
+		totalIF = contactMT.getTotalIF();
+		avgIF = totalIF / count;
 
-		//maxIF = max1;
+		maxIF = (max1 + max2 + max3 + max4 + max5 + max6 + max7) / 7.0 ; 
+		maxIF = Math.min(maxIF, avgIF * 500);
+		
 		
 		for(int i = 1; i < n - 1; i++){
 			if ((idToChr.get(i) == idToChr.get(i - 1) /*&& Math.abs(lstPositions.get(i) - lstPositions.get(i - 1)) == 1*/)){
-				contactMT.updateContact(i, i - 1, maxIF);
+				if (contactMT.getContact(i, i) < maxIF){
+					contactMT.updateContact(i, i - 1, maxIF);
+				}
 				//contactMT[i][i - 1] = maxIF;
 				//contactMT[i - 1][i] = maxIF;
 			}
@@ -1015,7 +1022,7 @@ public class GenomeGenerator implements OptimizedObject{
 
 	
 	public static void main(String[] args) throws Exception{
-		String paraFile = "parameters_tad_res40.txt";
+		String paraFile = "parameters_normal.txt";
 		if (args != null && args.length >= 1){
 			paraFile = args[0];
 		}

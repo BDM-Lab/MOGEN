@@ -123,7 +123,7 @@ public class Helper {
 					}
 				}
 				progress++;
-				System.out.println(progress * 200000 + " input lines have been read !");
+				//System.out.println(progress * 200000 + " input lines have been read !");
 			}
 			br.close();
 			fr.close();
@@ -229,7 +229,7 @@ public class Helper {
 					}
 					
 					progress++;
-					System.out.println(progress * 200000 + " input lines have been read - second time!");
+					//System.out.println(progress * 200000 + " input lines have been read - second time!");
 				}	
 
 			}
@@ -932,7 +932,7 @@ public class Helper {
 				
 				
 				//line += getChainIDString(chain[idToChr.get(i)]);
-				line += getChainIDString((char)(idToChr.get(i) + 'A' ) + "");
+				line += getChainIDString((char)(idToChr.get(i) - 1 + 'A' ) + "");
 				line += getResSeqString(resName + "");
 				//line += getResSeqString("MET" + "");
 				
