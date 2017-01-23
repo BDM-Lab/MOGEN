@@ -347,7 +347,7 @@ public class GenomeGenerator implements OptimizedObject{
 			
 			
 			if (logPW != null){
-				logPW.println("Intra-chrosomal threshold computed from the percentage: " + intra_thres);
+				logPW.println("Intra-chromosomal threshold computed from the percentage: " + intra_thres);
 			}
 			
 			//filter
@@ -394,7 +394,7 @@ public class GenomeGenerator implements OptimizedObject{
 			INTER_IF_THRESHOLD = inter_thres;
 			
 			if (logPW != null){
-				logPW.println("Inter-chrosomal threshold computed from the percentage: " + inter_thres);
+				logPW.println("Inter-chromosomal threshold computed from the percentage: " + inter_thres);
 			}
 			
 			//filter
