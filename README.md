@@ -75,3 +75,6 @@ It's hard for all chromosomes to satisfy all these conditions, so, it is accepta
 
 This is because there is no or very few non-contacts in the input data, which often happens when the resolution is low (e.g 1MB). Set an appropriate contact threshold to make sure that there is at least 20% - 30% non-contacts (out of all possible contacts), the exact number doesn't matter because models are often similar.  
 
+### 3. what does the message "Intra-chromosomal threshold computed from the percentage: 4.351461" mean ? ###
+If the thresholds are set as percentages (by appending % after the numbers), MOGEN will compute thresholds in interaction frequency (or contact count) and out the above message.
+
